@@ -44,9 +44,9 @@ Head Meta Data (formerly "Head Metadata Plus") improves the definition and seman
 * Plug-n-play functionality
 * Born of simplicity, no frills
 * Easy to configure from the WP Admin
-* Adds complete set of meta tags to `&lt;head&gt;` section of posts and pages
-* Customize each `&lt;meta&gt;` tag with your own info
-* Adds any custom text/markup to `&lt;head&gt;` section of posts and pages
+* Adds complete set of meta tags to `<head>` section of posts and pages
+* Customize each `<meta>` tag with your own info
+* Adds any custom text/markup to `<head>` section of posts and pages
 * Customize additional content with any text/markup
 * Disable any field by leaving it blank
 * Auto-generates known information from your site
