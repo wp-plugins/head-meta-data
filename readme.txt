@@ -14,11 +14,11 @@ Stable tag: 20121102
 Version: 20121102
 License: GPLv2 or later
 
-Head Meta Data (formerly "Head Metadata Plus") adds a complete set of &lt;meta&gt; tags to the &lt;head&gt; section of all posts &amp; pages.
+Head Meta Data adds a complete set of &lt;meta&gt; tags to the &lt;head&gt; section of all posts &amp; pages.
 
 == Description ==
 
-Head Meta Data improves the definition and semantic quality of your web pages by adding a complete set of `&lt;meta&gt;` tags to the `&lt;head&gt;` section of your web pages.
+Head Meta Data (formerly "Head Metadata Plus") improves the definition and semantic quality of your web pages by adding a complete set of `<meta>` tags to the `<head>` section of your web pages.
 
 **Example**
 
