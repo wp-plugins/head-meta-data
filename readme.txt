@@ -22,22 +22,22 @@ Head Meta Data improves the definition and semantic quality of your web pages by
 
 **Example**
 
-	&lt;head&gt;
+	<head>
 	
-		&lt;meta name="abstract" content="Obsessive Web & Graphic Design."&gt;
-		&lt;meta name="author" content="Perishable"&gt;
-		&lt;meta name="classification" content="Website Design"&gt;
-		&lt;meta name="copyright" content="© Perishable Press - All rights Reserved."&gt;
-		&lt;meta name="designer" content="Monzilla Media"&gt;
-		&lt;meta name="language" content="EN-US"&gt;
-		&lt;meta name="publisher" content="Perishable Press"&gt;
-		&lt;meta name="rating" content="General"&gt;
-		&lt;meta name="resource-type" content="Document"&gt;
-		&lt;meta name="revisit-after" content="3"&gt;
-		&lt;meta name="subject" content="WordPress, Web Design, Code & Tutorials"&gt;
-		&lt;meta name="template" content="Volume Theme"&gt;
+		<meta name="abstract" content="Obsessive Web & Graphic Design.">
+		<meta name="author" content="Perishable">
+		<meta name="classification" content="Website Design">
+		<meta name="copyright" content="Copyright Perishable Press - All rights Reserved.">
+		<meta name="designer" content="Monzilla Media">
+		<meta name="language" content="EN-US">
+		<meta name="publisher" content="Perishable Press">
+		<meta name="rating" content="General">
+		<meta name="resource-type" content="Document">
+		<meta name="revisit-after" content="3">
+		<meta name="subject" content="WordPress, Web Design, Code & Tutorials">
+		<meta name="template" content="Volume Theme">
 	
-	&lt;/head&gt;
+	</head>
 
 **Features**
 
