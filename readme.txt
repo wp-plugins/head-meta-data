@@ -9,9 +9,9 @@ Author: Jeff Starr
 Contributors: specialk
 Donate link: http://digwp.com/book/
 Requires at least: 3.0
-Tested up to: 3.4.2
-Stable tag: 20121102
-Version: 20121102
+Tested up to: 3.5
+Stable tag: 20130103
+Version: 20130103
 License: GPLv2 or later
 
 Head Meta Data adds a complete set of &lt;meta&gt; tags to the &lt;head&gt; section of all posts &amp; pages.
@@ -71,6 +71,7 @@ Screenshots available at the [HMD Homepage](http://perishablepress.com/head-meta
 
 == Changelog ==
 
+* 20130103 - Added margins to submit buttons (required in WP 3.5)
 * 20121102 - Rebuilt plugin, changed name from "Head MetaData Plus" to "Head Meta Data".
 * 20060502 - Initial release.
 

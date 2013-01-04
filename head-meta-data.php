@@ -5,7 +5,7 @@
 	Description: Adds assorted &lt;meta&gt; tags and more to the &lt;head&gt; section of all posts &amp; pages.
 	Author: Jeff Starr
 	Author URI: http://monzilla.biz/
-	Version: 20121102
+	Version: 20130103
 	License: GPL v2
 	Usage: Visit the plugin's settings page to configure your options.
 	Tags: meta, head, wp_head, customize, author, publisher, language
@@ -17,7 +17,7 @@ $hmd_plugin  = __('Head Meta Data');
 $hmd_options = get_option('hmd_options');
 $hmd_path    = plugin_basename(__FILE__); // 'head-meta-data/head-meta-data.php';
 $hmd_homeurl = 'http://perishablepress.com/head-metadata-plus/';
-$hmd_version = '20121102';
+$hmd_version = '20130103';
 
 // require minimum version of WordPress
 add_action('admin_init', 'hmd_require_wp_version');
@@ -271,7 +271,7 @@ function hmd_render_form() {
 
 		#setting-error-settings_updated { margin: 10px 0; }
 		#setting-error-settings_updated p { margin: 5px; }
-		.button-primary { margin: 0 0 15px 15px; }
+		#mm-plugin-options .button-primary { margin: 0 0 15px 15px; }
 
 		#mm-panel-toggle { margin: 5px 0; }
 		#mm-credit-info { margin-top: -5px; }
