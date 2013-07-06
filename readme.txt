@@ -7,11 +7,11 @@ Tags: meta, head, wp_head, customize, author, publisher, language, custom conten
 Author URI: http://monzilla.biz/
 Author: Jeff Starr
 Contributors: specialk
-Donate link: http://digwp.com/book/
+Donate link: http://m0n.co/donate
 Requires at least: 3.0
 Tested up to: 3.5
-Stable tag: 20130103
-Version: 20130103
+Stable tag: 20130705
+Version: 20130705
 License: GPLv2 or later
 
 Head Meta Data adds a complete set of &lt;meta&gt; tags to the &lt;head&gt; section of all posts &amp; pages.
@@ -71,6 +71,7 @@ Screenshots available at the [HMD Homepage](http://perishablepress.com/head-meta
 
 == Changelog ==
 
+* 20130705 - General code check n clean, plus Overview and Updates admin panels now toggled open by default.
 * 20130103 - Added margins to submit buttons (required in WP 3.5)
 * 20121102 - Rebuilt plugin, changed name from "Head MetaData Plus" to "Head Meta Data".
 * 20060502 - Initial release.
@@ -81,6 +82,6 @@ To ask a question, visit the [HMD Homepage](http://perishablepress.com/head-meta
 
 == Donations ==
 
-I created this plugin with love for the WP community. To show support, consider purchasing my new book, [.htaccess made easy](http://htaccessbook.com/), or my WordPress book, [Digging into WordPress](http://digwp.com/).
+I created this plugin with love for the WP community. To show support, consider purchasing one of my books: [The Tao of WordPress](http://wp-tao.com/), [Digging into WordPress](http://digwp.com/), or [.htaccess made easy](http://htaccessbook.com/).
 
 Links, tweets and likes also appreciated. Thanks! :)
