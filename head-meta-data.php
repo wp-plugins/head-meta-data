@@ -60,19 +60,19 @@ function hmd_display_content() {
 		$close_tag = '">' . "\n";
 	}
 	if ($hmd_enable == true) {
-		if ($hmd_options['hmd_abstract']   !== '') $hmd_output  = '<meta name="abstract" content="'       . $hmd_options['hmd_abstract']   . $close_tag;
-		if ($hmd_options['hmd_author']     !== '') $hmd_output .= '<meta name="author" content="'         . $hmd_options['hmd_author']     . $close_tag;
-		if ($hmd_options['hmd_classify']   !== '') $hmd_output .= '<meta name="classification" content="' . $hmd_options['hmd_classify']   . $close_tag;
-		if ($hmd_options['hmd_copyright']  !== '') $hmd_output .= '<meta name="copyright" content="'      . $hmd_options['hmd_copyright']  . $close_tag;
-		if ($hmd_options['hmd_designer']   !== '') $hmd_output .= '<meta name="designer" content="'       . $hmd_options['hmd_designer']   . $close_tag;
-		if ($hmd_options['hmd_distribute'] !== '') $hmd_output .= '<meta name="distribution" content="'   . $hmd_options['hmd_distribute'] . $close_tag;
-		if ($hmd_options['hmd_language']   !== '') $hmd_output .= '<meta name="language" content="'       . $hmd_options['hmd_language']   . $close_tag;
-		if ($hmd_options['hmd_publisher']  !== '') $hmd_output .= '<meta name="publisher" content="'      . $hmd_options['hmd_publisher']  . $close_tag;
-		if ($hmd_options['hmd_rating']     !== '') $hmd_output .= '<meta name="rating" content="'         . $hmd_options['hmd_rating']     . $close_tag;
-		if ($hmd_options['hmd_resource']   !== '') $hmd_output .= '<meta name="resource-type" content="'  . $hmd_options['hmd_resource']   . $close_tag;
-		if ($hmd_options['hmd_revisit']    !== '') $hmd_output .= '<meta name="revisit-after" content="'  . $hmd_options['hmd_revisit']    . $close_tag;
-		if ($hmd_options['hmd_subject']    !== '') $hmd_output .= '<meta name="subject" content="'        . $hmd_options['hmd_subject']    . $close_tag;
-		if ($hmd_options['hmd_template']   !== '') $hmd_output .= '<meta name="template" content="'       . $hmd_options['hmd_template']   . $close_tag;
+		if ($hmd_options['hmd_abstract']   !== '') $hmd_output  = '		<meta name="abstract" content="'       . $hmd_options['hmd_abstract']   . $close_tag;
+		if ($hmd_options['hmd_author']     !== '') $hmd_output .= '		<meta name="author" content="'         . $hmd_options['hmd_author']     . $close_tag;
+		if ($hmd_options['hmd_classify']   !== '') $hmd_output .= '		<meta name="classification" content="' . $hmd_options['hmd_classify']   . $close_tag;
+		if ($hmd_options['hmd_copyright']  !== '') $hmd_output .= '		<meta name="copyright" content="'      . $hmd_options['hmd_copyright']  . $close_tag;
+		if ($hmd_options['hmd_designer']   !== '') $hmd_output .= '		<meta name="designer" content="'       . $hmd_options['hmd_designer']   . $close_tag;
+		if ($hmd_options['hmd_distribute'] !== '') $hmd_output .= '		<meta name="distribution" content="'   . $hmd_options['hmd_distribute'] . $close_tag;
+		if ($hmd_options['hmd_language']   !== '') $hmd_output .= '		<meta name="language" content="'       . $hmd_options['hmd_language']   . $close_tag;
+		if ($hmd_options['hmd_publisher']  !== '') $hmd_output .= '		<meta name="publisher" content="'      . $hmd_options['hmd_publisher']  . $close_tag;
+		if ($hmd_options['hmd_rating']     !== '') $hmd_output .= '		<meta name="rating" content="'         . $hmd_options['hmd_rating']     . $close_tag;
+		if ($hmd_options['hmd_resource']   !== '') $hmd_output .= '		<meta name="resource-type" content="'  . $hmd_options['hmd_resource']   . $close_tag;
+		if ($hmd_options['hmd_revisit']    !== '') $hmd_output .= '		<meta name="revisit-after" content="'  . $hmd_options['hmd_revisit']    . $close_tag;
+		if ($hmd_options['hmd_subject']    !== '') $hmd_output .= '		<meta name="subject" content="'        . $hmd_options['hmd_subject']    . $close_tag;
+		if ($hmd_options['hmd_template']   !== '') $hmd_output .= '		<meta name="template" content="'       . $hmd_options['hmd_template']   . $close_tag;
 	}
 	return $hmd_output;
 }
@@ -81,7 +81,7 @@ function hmd_display_content() {
 add_action('wp_head', 'hmd_custom_content');
 function hmd_custom_content() {
 	global $hmd_options;
-	if ($hmd_options['hmd_custom'] !== '') echo $hmd_options['hmd_custom'] . "\n";
+	if ($hmd_options['hmd_custom'] !== '') echo "\t\t" . $hmd_options['hmd_custom'] . "\n";
 }
 
 // shortcode to display custom content
