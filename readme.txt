@@ -83,10 +83,21 @@ Screenshots available at the [HMD Homepage](http://perishablepress.com/head-meta
 * Removed closing "?>" tag in head-meta-data.php
 * Tested with latest version of WordPress (3.7)
 
-* 20130705 - General code check n clean, plus Overview and Updates admin panels now toggled open by default.
-* 20130103 - Added margins to submit buttons (required in WP 3.5)
-* 20121102 - Rebuilt plugin, changed name from "Head MetaData Plus" to "Head Meta Data".
-* 20060502 - Initial release.
+**20130705**
+
+* General code check n clean, plus Overview and Updates admin panels now toggled open by default.
+
+**20130103**
+
+* Added margins to submit buttons (required in WP 3.5)
+
+**20121102**
+
+* Rebuilt plugin, changed name from "Head MetaData Plus" to "Head Meta Data".
+
+**20060502**
+
+* Initial release.
 
 == Frequently Asked Questions ==
 
