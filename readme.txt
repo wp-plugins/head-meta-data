@@ -9,9 +9,9 @@ Author: Jeff Starr
 Contributors: specialk
 Donate link: http://m0n.co/donate
 Requires at least: 3.0
-Tested up to: 3.5
-Stable tag: 20130705
-Version: 20130705
+Tested up to: 3.7
+Stable tag: trunk
+Version: 20131104
 License: GPLv2 or later
 
 Head Meta Data adds a complete set of &lt;meta&gt; tags to the &lt;head&gt; section of all posts &amp; pages.
@@ -48,6 +48,7 @@ Head Meta Data (formerly "Head Metadata Plus") improves the definition and seman
 * Customize each `<meta>` tag with your own info
 * Adds any custom text/markup to `<head>` section of posts and pages
 * Customize additional content with any text/markup
+* Supports Twitter Cards and Open Graph tags via custom content
 * Disable any field by leaving it blank
 * Auto-generates known information from your site
 * Choose HTML or XHTML format for meta tags
@@ -70,6 +71,17 @@ To upgrade Head Meta Data, remove old version and replace with new version. Noth
 Screenshots available at the [HMD Homepage](http://perishablepress.com/head-metadata-plus/).
 
 == Changelog ==
+
+**20131104**
+
+* Added line to prevent direct script access
+* Changed default value for copyright meta
+* Improved support for custom content
+* Fixed bug reported [here](http://wordpress.org/support/topic/strange-custom-tag)
+* Replaced wp_kses_post with wp_kses
+* Added "href", "property", "title", "rel", "type", "charset", "media", "rev" to list of allowed attributes
+* Removed closing "?>" tag in head-meta-data.php
+* Tested with latest version of WordPress (3.7)
 
 * 20130705 - General code check n clean, plus Overview and Updates admin panels now toggled open by default.
 * 20130103 - Added margins to submit buttons (required in WP 3.5)

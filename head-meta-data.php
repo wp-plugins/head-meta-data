@@ -6,7 +6,7 @@
 	Author: Jeff Starr
 	Author URI: http://monzilla.biz/
 	Donate link: http://m0n.co/donate
-	Version: 20130705
+	Version: 20131104
 	License: GPL v2
 	Usage: Visit the plugin's settings page to configure your options.
 	Tags: meta, head, wp_head, customize, author, publisher, language
@@ -14,11 +14,13 @@
 
 // NO EDITING REQUIRED - PLEASE SET PREFERENCES IN THE WP ADMIN!
 
+if (!defined('ABSPATH')) die();
+
 $hmd_plugin  = __('Head Meta Data', 'hmd');
 $hmd_options = get_option('hmd_options');
 $hmd_path    = plugin_basename(__FILE__); // 'head-meta-data/head-meta-data.php';
 $hmd_homeurl = 'http://perishablepress.com/head-metadata-plus/';
-$hmd_version = '20130705';
+$hmd_version = '20131104';
 
 // require minimum version of WordPress
 add_action('admin_init', 'hmd_require_wp_version');
@@ -151,7 +153,7 @@ function hmd_add_defaults() {
 			'hmd_abstract'    => $site_desc,
 			'hmd_author'      => $admin_name,
 			'hmd_classify'    => $subjects,
-			'hmd_copyright'   => '&copy; ' . $site_name . ' - All rights Reserved.',
+			'hmd_copyright'   => 'Copyright ' . $site_name . ' - All rights Reserved.',
 			'hmd_designer'    => $designer,
 			'hmd_distribute'  => 'Global',
 			'hmd_language'    => $site_lang,
@@ -162,7 +164,7 @@ function hmd_add_defaults() {
 			'hmd_subject'     => $subjects,
 			'hmd_template'    => $the_theme,
 			'hmd_enable'      => 1,
-			'hmd_custom'      => '<meta name=\'example\' content=\'custom\'>',
+			'hmd_custom'      => '<meta name="example" content="custom">',
 			'hmd_format'      => 1,
 		);
 		update_option('hmd_options', $arr);
@@ -202,7 +204,8 @@ function hmd_validate_options($input) {
 	global $allowedposttags;
 	$allowed_atts = array(
 		'align'=>array(), 'class'=>array(), 'id'=>array(), 'dir'=>array(), 'lang'=>array(), 'style'=>array(), 'label'=>array(), 'url'=>array(), 
-		'xml:lang'=>array(), 'src'=>array(), 'alt'=>array(), 'name'=>array(), 'content'=>array(), 'http-equiv'=>array(), 'profile'=>array()
+		'xml:lang'=>array(), 'src'=>array(), 'alt'=>array(), 'name'=>array(), 'content'=>array(), 'http-equiv'=>array(), 'profile'=>array(), 
+		'href'=>array(), 'property'=>array(), 'title'=>array(), 'rel'=>array(), 'type'=>array(), 'charset'=>array(), 'media'=>array(), 'rev'=>array(),
 		);
 	$allowedposttags['strong'] = $allowed_atts;
 	$allowedposttags['script'] = $allowed_atts;
@@ -229,7 +232,7 @@ function hmd_validate_options($input) {
 	$allowedposttags['p'] = $allowed_atts;
 	$allowedposttags['a'] = $allowed_atts;
 
-	$input['hmd_custom'] = wp_kses_post($input['hmd_custom'], $allowedposttags);
+	$input['hmd_custom'] = wp_kses($input['hmd_custom'], $allowedposttags);
 
 	if (!isset($input['hmd_format'])) $input['hmd_format'] = null;
 	$input['hmd_format'] = ($input['hmd_format'] == 1 ? 1 : 0);
@@ -327,7 +330,7 @@ function hmd_render_form() {
 									</tr>
 									<tr>
 										<th scope="row"><label class="description" for="hmd_options[hmd_custom]"><?php _e('Include custom content?', 'hmd'); ?></label></th>
-										<td><input type="text" size="50" maxlength="200" name="hmd_options[hmd_custom]" value="<?php echo $hmd_options['hmd_custom']; ?>" />
+										<td><textarea type="textarea" rows="7" cols="55" name="hmd_options[hmd_custom]"><?php echo esc_textarea($hmd_options['hmd_custom']); ?></textarea>
 										<div class="mm-item-caption"><?php _e('Here you may specify any text/markup to be displayed in the <code>&lt;head&gt;</code> section. Note: use single quotes for attributes. Leave blank to disable.', 'hmd'); ?></div></td>
 									</tr>
 								</table>
@@ -497,4 +500,4 @@ function hmd_render_form() {
 		});
 	</script>
 
-<?php } ?>
+<?php }
