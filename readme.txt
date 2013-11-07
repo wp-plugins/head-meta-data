@@ -11,7 +11,7 @@ Donate link: http://m0n.co/donate
 Requires at least: 3.0
 Tested up to: 3.7
 Stable tag: trunk
-Version: 20131104
+Version: 20131107
 License: GPLv2 or later
 
 Head Meta Data adds a complete set of &lt;meta&gt; tags to the &lt;head&gt; section of all posts &amp; pages.
@@ -71,6 +71,12 @@ To upgrade Head Meta Data, remove old version and replace with new version. Noth
 Screenshots available at the [HMD Homepage](http://perishablepress.com/head-metadata-plus/).
 
 == Changelog ==
+
+**20131107**
+
+* Added uninstall.php file
+* Added "rate this plugin" links
+* Added support for i18n
 
 **20131104**
 

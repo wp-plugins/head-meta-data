@@ -6,7 +6,7 @@
 	Author: Jeff Starr
 	Author URI: http://monzilla.biz/
 	Donate link: http://m0n.co/donate
-	Version: 20131104
+	Version: 20131107
 	License: GPL v2
 	Usage: Visit the plugin's settings page to configure your options.
 	Tags: meta, head, wp_head, customize, author, publisher, language
@@ -16,11 +16,17 @@
 
 if (!defined('ABSPATH')) die();
 
+// i18n
+function hmd_i18n_init() {
+	load_plugin_textdomain('hmd', false, dirname(plugin_basename(__FILE__)) . '/languages');
+}
+add_action('plugins_loaded', 'hmd_i18n_init');
+
 $hmd_plugin  = __('Head Meta Data', 'hmd');
 $hmd_options = get_option('hmd_options');
 $hmd_path    = plugin_basename(__FILE__); // 'head-meta-data/head-meta-data.php';
 $hmd_homeurl = 'http://perishablepress.com/head-metadata-plus/';
-$hmd_version = '20131104';
+$hmd_version = '20131107';
 
 // require minimum version of WordPress
 add_action('admin_init', 'hmd_require_wp_version');
@@ -107,6 +113,16 @@ function hmd_plugin_action_links($links, $file) {
 	}
 	return $links;
 }
+
+// rate plugin link
+function add_hmd_links($links, $file) {
+	if ($file == plugin_basename(__FILE__)) {
+		$rate_url = 'http://wordpress.org/support/view/plugin-reviews/' . basename(dirname(__FILE__)) . '?rate=5#postform';
+		$links[] = '<a href="' . $rate_url . '" target="_blank" title="Click here to rate and review this plugin on WordPress.org">Rate this plugin</a>';
+	}
+	return $links;
+}
+add_filter('plugin_row_meta', 'add_hmd_links', 10, 2);
 
 // delete plugin settings
 function hmd_delete_plugin_options() {
@@ -307,6 +323,11 @@ function hmd_render_form() {
 									<li><?php _e('For a live preview of the meta tags, visit', 'hmd'); ?> <a id="mm-panel-secondary-link" href="#mm-panel-secondary"><?php _e('Preview', 'hmd'); ?></a>.</li>
 									<li><?php _e('To restore default settings, visit', 'hmd'); ?> <a id="mm-restore-settings-link" href="#mm-restore-settings"><?php _e('Restore Default Options', 'hmd'); ?></a>.</li>
 									<li><?php _e('For more information check the <code>readme.txt</code> and', 'hmd'); ?> <a href="<?php echo $hmd_homeurl; ?>"><?php _e('HMD Homepage', 'hmd'); ?></a>.</li>
+									<li><?php _e('If you like this plugin, please', 'hmd'); ?> 
+										<a href="http://wordpress.org/support/view/plugin-reviews/<?php echo basename(dirname(__FILE__)); ?>?rate=5#postform" title="<?php _e('Click here to rate and review this plugin on WordPress.org', 'hmd'); ?>" target="_blank">
+											<?php _e('rate it at the Plugin Directory', 'hmd'); ?>&nbsp;&raquo;
+										</a>
+									</li>
 								</ul>
 							</div>
 						</div>
