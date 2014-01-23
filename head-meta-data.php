@@ -6,7 +6,7 @@
 	Author: Jeff Starr
 	Author URI: http://monzilla.biz/
 	Donate link: http://m0n.co/donate
-	Version: 20131107
+	Version: 20140123
 	License: GPL v2
 	Usage: Visit the plugin's settings page to configure your options.
 	Tags: meta, head, wp_head, customize, author, publisher, language
@@ -18,7 +18,7 @@ if (!defined('ABSPATH')) die();
 
 // i18n
 function hmd_i18n_init() {
-	load_plugin_textdomain('hmd', false, dirname(plugin_basename(__FILE__)) . '/languages');
+	load_plugin_textdomain('hmd', false, dirname(plugin_basename(__FILE__)) . '/languages/');
 }
 add_action('plugins_loaded', 'hmd_i18n_init');
 
@@ -26,7 +26,7 @@ $hmd_plugin  = __('Head Meta Data', 'hmd');
 $hmd_options = get_option('hmd_options');
 $hmd_path    = plugin_basename(__FILE__); // 'head-meta-data/head-meta-data.php';
 $hmd_homeurl = 'http://perishablepress.com/head-metadata-plus/';
-$hmd_version = '20131107';
+$hmd_version = '20140123';
 
 // require minimum version of WordPress
 add_action('admin_init', 'hmd_require_wp_version');

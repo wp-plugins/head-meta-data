@@ -9,9 +9,9 @@ Author: Jeff Starr
 Contributors: specialk
 Donate link: http://m0n.co/donate
 Requires at least: 3.0
-Tested up to: 3.7
+Tested up to: 3.8
 Stable tag: trunk
-Version: 20131107
+Version: 20140123
 License: GPLv2 or later
 
 Head Meta Data adds a complete set of &lt;meta&gt; tags to the &lt;head&gt; section of all posts &amp; pages.
@@ -71,6 +71,11 @@ To upgrade Head Meta Data, remove old version and replace with new version. Noth
 Screenshots available at the [HMD Homepage](http://perishablepress.com/head-metadata-plus/).
 
 == Changelog ==
+
+**20140123**
+
+* Tested with latest WordPress (3.8)
+* Added trailing slash to load_plugin_textdomain()
 
 **20131107**
 
