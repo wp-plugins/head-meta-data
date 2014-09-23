@@ -8,10 +8,10 @@ Author URI: http://monzilla.biz/
 Author: Jeff Starr
 Contributors: specialk
 Donate link: http://m0n.co/donate
-Requires at least: 3.0
-Tested up to: 3.8
+Requires at least: 3.7
+Tested up to: 4.0
 Stable tag: trunk
-Version: 20140123
+Version: 20140923
 License: GPLv2 or later
 
 Head Meta Data adds a complete set of &lt;meta&gt; tags to the &lt;head&gt; section of all posts &amp; pages.
@@ -71,6 +71,13 @@ To upgrade Head Meta Data, remove old version and replace with new version. Noth
 Screenshots available at the [HMD Homepage](http://perishablepress.com/head-metadata-plus/).
 
 == Changelog ==
+
+**20140123**
+* Tested with latest version of WordPress (4.0)
+* Increased minimum WP version requirement to 3.7
+* Added conditional check on min-version function
+* 
+
 
 **20140123**
 

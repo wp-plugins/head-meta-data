@@ -6,7 +6,7 @@
 	Author: Jeff Starr
 	Author URI: http://monzilla.biz/
 	Donate link: http://m0n.co/donate
-	Version: 20140123
+	Version: 20140923
 	License: GPL v2
 	Usage: Visit the plugin's settings page to configure your options.
 	Tags: meta, head, wp_head, customize, author, publisher, language
@@ -26,20 +26,22 @@ $hmd_plugin  = __('Head Meta Data', 'hmd');
 $hmd_options = get_option('hmd_options');
 $hmd_path    = plugin_basename(__FILE__); // 'head-meta-data/head-meta-data.php';
 $hmd_homeurl = 'http://perishablepress.com/head-metadata-plus/';
-$hmd_version = '20140123';
+$hmd_version = '20140923';
 
 // require minimum version of WordPress
-add_action('admin_init', 'hmd_require_wp_version');
 function hmd_require_wp_version() {
 	global $wp_version, $hmd_path, $hmd_plugin;
-	if (version_compare($wp_version, '3.4', '<')) {
+	if (version_compare($wp_version, '3.7', '<')) {
 		if (is_plugin_active($hmd_path)) {
 			deactivate_plugins($hmd_path);
-			$msg =  '<strong>' . $hmd_plugin . '</strong> ' . __('requires WordPress 3.4 or higher, and has been deactivated!', 'hmd') . '<br />';
+			$msg =  '<strong>' . $hmd_plugin . '</strong> ' . __('requires WordPress 3.7 or higher, and has been deactivated!', 'hmd') . '<br />';
 			$msg .= __('Please return to the', 'hmd') . ' <a href="' . admin_url() . '">' . __('WordPress Admin area', 'hmd') . '</a> ' . __('to upgrade WordPress and try again.', 'hmd');
 			wp_die($msg);
 		}
 	}
+}
+if (isset($_GET['activate']) && $_GET['activate'] == 'true') {
+	add_action('admin_init', 'hmd_require_wp_version');
 }
 
 // insert head meta data
