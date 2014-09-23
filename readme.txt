@@ -72,12 +72,11 @@ Screenshots available at the [HMD Homepage](http://perishablepress.com/head-meta
 
 == Changelog ==
 
-**20140123**
+**20140923**
+
 * Tested with latest version of WordPress (4.0)
 * Increased minimum WP version requirement to 3.7
 * Added conditional check on min-version function
-* 
-
 
 **20140123**
 
