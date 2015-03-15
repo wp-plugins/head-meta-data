@@ -4,15 +4,17 @@ Plugin Name: Head Meta Data
 Plugin URI: http://perishablepress.com/head-metadata-plus/
 Description: Adds a complete set of &lt;meta&gt; tags to the &lt;head&gt; section of all posts &amp; pages.
 Tags: meta, head, wp_head, customize, author, publisher, language, custom content, header
-Author URI: http://monzilla.biz/
 Author: Jeff Starr
-Contributors: specialk
+Author URI: http://monzilla.biz/
 Donate link: http://m0n.co/donate
-Requires at least: 3.7
-Tested up to: 4.0
+Contributors: specialk
+Requires at least: 3.8
+Tested up to: 4.1
 Stable tag: trunk
-Version: 20140923
-License: GPLv2 or later
+Version: 20150315
+Text Domain: hmd
+Domain Path: /languages/
+License: GPL v2 or later
 
 Head Meta Data adds a complete set of &lt;meta&gt; tags to the &lt;head&gt; section of all posts &amp; pages.
 
@@ -72,6 +74,16 @@ Screenshots available at the [HMD Homepage](http://perishablepress.com/head-meta
 
 == Changelog ==
 
+**20150315**
+
+* Tested with latest version of WP (4.1)
+* Increased minimum version to WP 3.8
+* Added $hmd_wp_vers for version check
+* Streamline/fine-tune plugin code
+* Added Text Domain and Domain Path to file header
+* Added .pot template for localization
+* Removed deprecated screen_icon()
+
 **20140923**
 
 * Tested with latest version of WordPress (4.0)
@@ -122,6 +134,11 @@ To ask a question, visit the [HMD Homepage](http://perishablepress.com/head-meta
 
 == Donations ==
 
-I created this plugin with love for the WP community. To show support, consider purchasing one of my books: [The Tao of WordPress](http://wp-tao.com/), [Digging into WordPress](http://digwp.com/), or [.htaccess made easy](http://htaccessbook.com/).
+I created this plugin with love for the WP community. To show support, you can [make a donation](http://m0n.co/donate) or purchase one of my books: 
+
+* [The Tao of WordPress](http://wp-tao.com/)
+* [Digging into WordPress](http://digwp.com/)
+* [.htaccess made easy](http://htaccessbook.com/)
+* [WordPress Themes In Depth](http://wp-tao.com/wordpress-themes-book/)
 
 Links, tweets and likes also appreciated. Thanks! :)

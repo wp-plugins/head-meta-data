@@ -1,0 +1,341 @@
+# Loco Gettext template
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Head Meta Data\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: Sun Mar 15 2015 13:34:10 GMT-0700 (PDT)\n"
+"POT-Revision-Date: Sun Mar 15 2015 13:34:18 GMT-0700 (PDT)\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: ../head-meta-data.php:24
+msgid "Head Meta Data"
+msgstr ""
+
+#: ../head-meta-data.php:39
+msgid "requires WordPress "
+msgstr ""
+
+#: ../head-meta-data.php:39
+msgid " or higher, and has been deactivated!"
+msgstr ""
+
+#: ../head-meta-data.php:40
+msgid "Please return to the"
+msgstr ""
+
+#: ../head-meta-data.php:40
+msgid "WordPress Admin area"
+msgstr ""
+
+#: ../head-meta-data.php:40
+msgid "to upgrade WordPress and try again."
+msgstr ""
+
+#: ../head-meta-data.php:108
+msgid "Settings"
+msgstr ""
+
+#: ../head-meta-data.php:297
+msgid "Toggle all panels"
+msgstr ""
+
+#: ../head-meta-data.php:305
+msgid "Overview"
+msgstr ""
+
+#: ../head-meta-data.php:309
+msgid ""
+"(HMD) adds assorted <code>&lt;head&gt;</code> tags and more to the <code>&lt;"
+"head&gt;</code> section of all posts &amp; pages."
+msgstr ""
+
+#: ../head-meta-data.php:310
+msgid ""
+"Optionally includes custom text/markup in the <code>&lt;head&gt;</code> "
+"section."
+msgstr ""
+
+#: ../head-meta-data.php:313
+msgid "To configure the plugin, visit"
+msgstr ""
+
+#: ../head-meta-data.php:313 ../head-meta-data.php:327
+msgid "Options"
+msgstr ""
+
+#: ../head-meta-data.php:314
+msgid "For a live preview of the meta tags, visit"
+msgstr ""
+
+#: ../head-meta-data.php:314 ../head-meta-data.php:425
+msgid "Preview"
+msgstr ""
+
+#: ../head-meta-data.php:315
+msgid "To restore default settings, visit"
+msgstr ""
+
+#: ../head-meta-data.php:315 ../head-meta-data.php:444
+msgid "Restore Default Options"
+msgstr ""
+
+#: ../head-meta-data.php:316
+msgid "For more information check the <code>readme.txt</code> and"
+msgstr ""
+
+#: ../head-meta-data.php:316
+msgid "HMD Homepage"
+msgstr ""
+
+#: ../head-meta-data.php:317
+msgid "If you like this plugin, please"
+msgstr ""
+
+#: ../head-meta-data.php:318
+msgid "Click here to rate and review this plugin on WordPress.org"
+msgstr ""
+
+#: ../head-meta-data.php:319
+msgid "rate it at the Plugin Directory"
+msgstr ""
+
+#: ../head-meta-data.php:329
+msgid "General options"
+msgstr ""
+
+#: ../head-meta-data.php:330
+msgid ""
+"Here you may enable/disable meta output, specify custom content, and choose "
+"either <abbr title=\"Hypertext Markup Language\">HTML</abbr> or <abbr "
+"title=\"eXtensible Hypertext Markup Language\">XHTML</abbr> formatting."
+msgstr ""
+
+#: ../head-meta-data.php:334
+msgid "Enable plugin?"
+msgstr ""
+
+#: ../head-meta-data.php:336
+msgid "Check this box if you want to enable output of your customized meta tags."
+msgstr ""
+
+#: ../head-meta-data.php:339
+msgid "HTML Format?"
+msgstr ""
+
+#: ../head-meta-data.php:341
+msgid ""
+"Uncheck this box if you want to enable <abbr title=\"eXtensible Hypertext "
+"Markup Language\">XHTML</abbr> format. Leave checked for the default (<abbr "
+"title=\"Hypertext Markup Language\">HTML</abbr>)."
+msgstr ""
+
+#: ../head-meta-data.php:344
+msgid "Include custom content?"
+msgstr ""
+
+#: ../head-meta-data.php:346
+msgid ""
+"Here you may specify any text/markup to be displayed in the <code>&lt;"
+"head&gt;</code> section. Note: use single quotes for attributes. Leave blank "
+"to disable."
+msgstr ""
+
+#: ../head-meta-data.php:350 ../head-meta-data.php:429
+msgid "Meta tags"
+msgstr ""
+
+#: ../head-meta-data.php:351
+msgid ""
+"Here you may specify text values for your <code>&lt;meta&gt;</code> tags. "
+"Leave blank to disable specific tags."
+msgstr ""
+
+#: ../head-meta-data.php:355
+msgid "Meta abstract"
+msgstr ""
+
+#: ../head-meta-data.php:357
+msgid ""
+"Provide an abstract summarizing the content of your website. Should be one "
+"brief sentence."
+msgstr ""
+
+#: ../head-meta-data.php:360
+msgid "Meta author"
+msgstr ""
+
+#: ../head-meta-data.php:362
+msgid ""
+"Indicate the author(s) of the website. May also include email address if you "
+"prefer plenty spam."
+msgstr ""
+
+#: ../head-meta-data.php:365
+msgid "Meta classification"
+msgstr ""
+
+#: ../head-meta-data.php:367
+msgid "Classify your website. Examples: Website Design, Digital Photography."
+msgstr ""
+
+#: ../head-meta-data.php:370
+msgid "Meta copyright"
+msgstr ""
+
+#: ../head-meta-data.php:372
+msgid ""
+"Indicate the copyright information for the site. May include trademark names,"
+" patent numbers, etc."
+msgstr ""
+
+#: ../head-meta-data.php:375
+msgid "Meta designer"
+msgstr ""
+
+#: ../head-meta-data.php:377
+msgid "Indicate the designer(s) of the website."
+msgstr ""
+
+#: ../head-meta-data.php:380
+msgid "Meta distribution"
+msgstr ""
+
+#: ../head-meta-data.php:382
+msgid ""
+"Indicate the distribution level on the web. Examples: Global, Regional, "
+"Local."
+msgstr ""
+
+#: ../head-meta-data.php:385
+msgid "Meta language"
+msgstr ""
+
+#: ../head-meta-data.php:387
+msgid "Indicate the primary language used for your website. Examples: EN-US, EN, FR."
+msgstr ""
+
+#: ../head-meta-data.php:390
+msgid "Meta publisher"
+msgstr ""
+
+#: ../head-meta-data.php:392
+msgid "Indicate the publisher of the website."
+msgstr ""
+
+#: ../head-meta-data.php:395
+msgid "Meta rating"
+msgstr ""
+
+#: ../head-meta-data.php:397
+msgid ""
+"Indicate the rating of the site&rsquo;s content. Examples: General, Mature, "
+"Restricted."
+msgstr ""
+
+#: ../head-meta-data.php:400
+msgid "Meta resource-type"
+msgstr ""
+
+#: ../head-meta-data.php:402
+msgid "Indicate the primary resource type for the site. Example: Document."
+msgstr ""
+
+#: ../head-meta-data.php:405
+msgid "Meta revisit-after"
+msgstr ""
+
+#: ../head-meta-data.php:407
+msgid ""
+"Frequency (in days) that search engines should revisit your site for re-"
+"indexing. Examples: 1, 2, 3."
+msgstr ""
+
+#: ../head-meta-data.php:410
+msgid "Meta subject"
+msgstr ""
+
+#: ../head-meta-data.php:412
+msgid ""
+"Indicate the primary subject(s) of the website. Examples: Photography, "
+"Sports, Pancakes, etc."
+msgstr ""
+
+#: ../head-meta-data.php:415
+msgid "Meta template"
+msgstr ""
+
+#: ../head-meta-data.php:417
+msgid ""
+"Indicate any template that pertains to the site. Examples: Zonked Out "
+"WordPress Theme."
+msgstr ""
+
+#: ../head-meta-data.php:421 ../head-meta-data.php:455
+msgid "Save Settings"
+msgstr ""
+
+#: ../head-meta-data.php:427
+msgid "Here is a preview of your meta tags and custom content."
+msgstr ""
+
+#: ../head-meta-data.php:430
+msgid "(display using <code>[head_meta_data]</code> shortcode)"
+msgstr ""
+
+#: ../head-meta-data.php:432
+msgid "Custom content"
+msgstr ""
+
+#: ../head-meta-data.php:433
+msgid "(display using <code>[hmd_custom]</code> shortcode)"
+msgstr ""
+
+#: ../head-meta-data.php:435
+msgid "More infos"
+msgstr ""
+
+#: ../head-meta-data.php:437
+msgid "For more information on document headers:"
+msgstr ""
+
+#: ../head-meta-data.php:438
+msgid "And more specifically the section on meta tags:"
+msgstr ""
+
+#: ../head-meta-data.php:448
+msgid "Restore default options upon plugin deactivation/reactivation."
+msgstr ""
+
+#: ../head-meta-data.php:452
+msgid ""
+"<strong>Tip:</strong> leave this option unchecked to remember your settings. "
+"Or, to go ahead and restore all default options, check the box, save your "
+"settings, and then deactivate/reactivate the plugin."
+msgstr ""
+
+#: ../head-meta-data.php:459
+msgid "Updates &amp; Info"
+msgstr ""
+
+#: ../head-meta-data.php:504
+msgid ""
+"Are you sure you want to restore all default options? (this action cannot be "
+"undone)"
+msgstr ""

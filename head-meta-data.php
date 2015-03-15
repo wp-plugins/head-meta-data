@@ -2,39 +2,41 @@
 /*
 	Plugin Name: Head Meta Data
 	Plugin URI: http://perishablepress.com/head-metadata-plus/
-	Description: Adds assorted &lt;meta&gt; tags and more to the &lt;head&gt; section of all posts &amp; pages.
+	Description: Adds a complete set of &lt;meta&gt; tags to the &lt;head&gt; section of all posts &amp; pages.
+	Tags: meta, head, wp_head, customize, author, publisher, language, custom content, header
 	Author: Jeff Starr
 	Author URI: http://monzilla.biz/
 	Donate link: http://m0n.co/donate
-	Version: 20140923
-	License: GPL v2
-	Usage: Visit the plugin's settings page to configure your options.
-	Tags: meta, head, wp_head, customize, author, publisher, language
+	Contributors: specialk
+	Requires at least: 3.8
+	Tested up to: 4.1
+	Stable tag: trunk
+	Version: 20150315
+	Text Domain: hmd
+	Domain Path: /languages/
+	License: GPL v2 or later
 */
-
-// NO EDITING REQUIRED - PLEASE SET PREFERENCES IN THE WP ADMIN!
 
 if (!defined('ABSPATH')) die();
 
-// i18n
+$hmd_wp_vers = '3.8';
+$hmd_version = '20150315';
+$hmd_plugin  = __('Head Meta Data', 'hmd');
+$hmd_options = get_option('hmd_options');
+$hmd_path    = plugin_basename(__FILE__); // 'head-meta-data/head-meta-data.php';
+$hmd_homeurl = 'http://perishablepress.com/head-metadata-plus/';
+
 function hmd_i18n_init() {
 	load_plugin_textdomain('hmd', false, dirname(plugin_basename(__FILE__)) . '/languages/');
 }
 add_action('plugins_loaded', 'hmd_i18n_init');
 
-$hmd_plugin  = __('Head Meta Data', 'hmd');
-$hmd_options = get_option('hmd_options');
-$hmd_path    = plugin_basename(__FILE__); // 'head-meta-data/head-meta-data.php';
-$hmd_homeurl = 'http://perishablepress.com/head-metadata-plus/';
-$hmd_version = '20140923';
-
-// require minimum version of WordPress
 function hmd_require_wp_version() {
-	global $wp_version, $hmd_path, $hmd_plugin;
-	if (version_compare($wp_version, '3.7', '<')) {
+	global $wp_version, $hmd_path, $hmd_plugin, $hmd_wp_vers;
+	if (version_compare($wp_version, $hmd_wp_vers, '<')) {
 		if (is_plugin_active($hmd_path)) {
 			deactivate_plugins($hmd_path);
-			$msg =  '<strong>' . $hmd_plugin . '</strong> ' . __('requires WordPress 3.7 or higher, and has been deactivated!', 'hmd') . '<br />';
+			$msg =  '<strong>' . $hmd_plugin . '</strong> ' . __('requires WordPress ', 'hmd') . $hmd_wp_vers . __(' or higher, and has been deactivated!', 'hmd') . '<br />';
 			$msg .= __('Please return to the', 'hmd') . ' <a href="' . admin_url() . '">' . __('WordPress Admin area', 'hmd') . '</a> ' . __('to upgrade WordPress and try again.', 'hmd');
 			wp_die($msg);
 		}
@@ -44,21 +46,18 @@ if (isset($_GET['activate']) && $_GET['activate'] == 'true') {
 	add_action('admin_init', 'hmd_require_wp_version');
 }
 
-// insert head meta data
-add_action('wp_head', 'head_meta_data');
 function head_meta_data() { 
 	echo hmd_display_content();
 }
+add_action('wp_head', 'head_meta_data');
 
-// shortcode to display head meta data
-add_shortcode('head_meta_data','hmd_shortcode');
 function hmd_shortcode() {
 	$get_meta_data = hmd_display_content();
 	$the_meta_data = str_replace(array('>', '<'), array('&gt;','&lt;'), $get_meta_data);
 	return $the_meta_data;
 }
+add_shortcode('head_meta_data','hmd_shortcode');
 
-// display head meta data
 function hmd_display_content() {
 	global $hmd_options;
 	$hmd_output = '';
@@ -87,15 +86,12 @@ function hmd_display_content() {
 	return $hmd_output;
 }
 
-// insert custom content
-add_action('wp_head', 'hmd_custom_content');
 function hmd_custom_content() {
 	global $hmd_options;
 	if ($hmd_options['hmd_custom'] !== '') echo "\t\t" . $hmd_options['hmd_custom'] . "\n";
 }
+add_action('wp_head', 'hmd_custom_content');
 
-// shortcode to display custom content
-add_shortcode('hmd_custom','hmd_custom_shortcode');
 function hmd_custom_shortcode() {
 	global $hmd_options;
 	if ($hmd_options['hmd_custom'] !== '') {
@@ -104,9 +100,8 @@ function hmd_custom_shortcode() {
 		return $the_custom_data;
 	}
 }
+add_shortcode('hmd_custom','hmd_custom_shortcode');
 
-// display settings link on plugin page
-add_filter ('plugin_action_links', 'hmd_plugin_action_links', 10, 2);
 function hmd_plugin_action_links($links, $file) {
 	global $hmd_path;
 	if ($file == $hmd_path) {
@@ -115,8 +110,8 @@ function hmd_plugin_action_links($links, $file) {
 	}
 	return $links;
 }
+add_filter ('plugin_action_links', 'hmd_plugin_action_links', 10, 2);
 
-// rate plugin link
 function add_hmd_links($links, $file) {
 	if ($file == plugin_basename(__FILE__)) {
 		$rate_url = 'http://wordpress.org/support/view/plugin-reviews/' . basename(dirname(__FILE__)) . '?rate=5#postform';
@@ -126,7 +121,6 @@ function add_hmd_links($links, $file) {
 }
 add_filter('plugin_row_meta', 'add_hmd_links', 10, 2);
 
-// delete plugin settings
 function hmd_delete_plugin_options() {
 	delete_option('hmd_options');
 }
@@ -134,8 +128,6 @@ if ($hmd_options['default_options'] == 1) {
 	register_uninstall_hook (__FILE__, 'hmd_delete_plugin_options');
 }
 
-// define default settings
-register_activation_hook (__FILE__, 'hmd_add_defaults');
 function hmd_add_defaults() {
 	// meta subject
 	$args = array('orderby'=>'name', 'order'=>'ASC');
@@ -188,14 +180,13 @@ function hmd_add_defaults() {
 		update_option('hmd_options', $arr);
 	}
 }
+register_activation_hook (__FILE__, 'hmd_add_defaults');
 
-// whitelist settings
-add_action ('admin_init', 'hmd_init');
 function hmd_init() {
 	register_setting('hmd_plugin_options', 'hmd_options', 'hmd_validate_options');
 }
+add_action ('admin_init', 'hmd_init');
 
-// sanitize and validate input
 function hmd_validate_options($input) {
 
 	if (!isset($input['default_options'])) $input['default_options'] = null;
@@ -258,14 +249,12 @@ function hmd_validate_options($input) {
 	return $input;
 }
 
-// add the options page
-add_action ('admin_menu', 'hmd_add_options_page');
 function hmd_add_options_page() {
 	global $hmd_plugin;
 	add_options_page($hmd_plugin, $hmd_plugin, 'manage_options', __FILE__, 'hmd_render_form');
 }
+add_action ('admin_menu', 'hmd_add_options_page');
 
-// create the options page
 function hmd_render_form() {
 	global $hmd_plugin, $hmd_options, $hmd_path, $hmd_homeurl, $hmd_version; ?>
 
@@ -302,8 +291,6 @@ function hmd_render_form() {
 	</style>
 
 	<div id="mm-plugin-options" class="wrap">
-		<?php screen_icon(); ?>
-
 		<h2><?php echo $hmd_plugin; ?> <small><?php echo 'v' . $hmd_version; ?></small></h2>
 		<div id="mm-panel-toggle"><a href="<?php get_admin_url() . 'options-general.php?page=' . $hmd_path; ?>"><?php _e('Toggle all panels', 'hmd'); ?></a></div>
 
@@ -324,7 +311,10 @@ function hmd_render_form() {
 									<li><?php _e('To configure the plugin, visit', 'hmd'); ?> <a id="mm-panel-primary-link" href="#mm-panel-primary"><?php _e('Options', 'hmd'); ?></a>.</li>
 									<li><?php _e('For a live preview of the meta tags, visit', 'hmd'); ?> <a id="mm-panel-secondary-link" href="#mm-panel-secondary"><?php _e('Preview', 'hmd'); ?></a>.</li>
 									<li><?php _e('To restore default settings, visit', 'hmd'); ?> <a id="mm-restore-settings-link" href="#mm-restore-settings"><?php _e('Restore Default Options', 'hmd'); ?></a>.</li>
-									<li><?php _e('For more information check the <code>readme.txt</code> and', 'hmd'); ?> <a href="<?php echo $hmd_homeurl; ?>"><?php _e('HMD Homepage', 'hmd'); ?></a>.</li>
+									<li>
+										<?php _e('For more information check the', 'hmd'); ?> <a target="_blank" href="<?php echo plugins_url('/head-meta-data/readme.txt', dirname(__FILE__)); ?>">readme.txt</a> 
+										<?php _e('and visit the', 'hmd'); ?> <a target="_blank" href="<?php echo $hmd_homeurl; ?>"><?php _e('HMD Homepage', 'hmd'); ?></a>.
+									</li>
 									<li><?php _e('If you like this plugin, please', 'hmd'); ?> 
 										<a href="http://wordpress.org/support/view/plugin-reviews/<?php echo basename(dirname(__FILE__)); ?>?rate=5#postform" title="<?php _e('Click here to rate and review this plugin on WordPress.org', 'hmd'); ?>" target="_blank">
 											<?php _e('rate it at the Plugin Directory', 'hmd'); ?>&nbsp;&raquo;
