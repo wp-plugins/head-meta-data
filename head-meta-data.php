@@ -1,17 +1,17 @@
 <?php 
 /*
 	Plugin Name: Head Meta Data
-	Plugin URI: http://perishablepress.com/head-metadata-plus/
+	Plugin URI: https://perishablepress.com/head-metadata-plus/
 	Description: Adds a complete set of &lt;meta&gt; tags to the &lt;head&gt; section of all posts &amp; pages.
 	Tags: meta, head, wp_head, customize, author, publisher, language, custom content, header
 	Author: Jeff Starr
 	Author URI: http://monzilla.biz/
 	Donate link: http://m0n.co/donate
 	Contributors: specialk
-	Requires at least: 3.8
-	Tested up to: 4.1
+	Requires at least: 3.9
+	Tested up to: 4.2
 	Stable tag: trunk
-	Version: 20150315
+	Version: 20150507
 	Text Domain: hmd
 	Domain Path: /languages/
 	License: GPL v2 or later
@@ -19,12 +19,12 @@
 
 if (!defined('ABSPATH')) die();
 
-$hmd_wp_vers = '3.8';
-$hmd_version = '20150315';
+$hmd_wp_vers = '3.9';
+$hmd_version = '20150507';
 $hmd_plugin  = __('Head Meta Data', 'hmd');
 $hmd_options = get_option('hmd_options');
 $hmd_path    = plugin_basename(__FILE__); // 'head-meta-data/head-meta-data.php';
-$hmd_homeurl = 'http://perishablepress.com/head-metadata-plus/';
+$hmd_homeurl = 'https://perishablepress.com/head-metadata-plus/';
 
 function hmd_i18n_init() {
 	load_plugin_textdomain('hmd', false, dirname(plugin_basename(__FILE__)) . '/languages/');
@@ -460,7 +460,7 @@ function hmd_render_form() {
 						<h3><?php _e('Updates &amp; Info', 'hmd'); ?></h3>
 						<div class="toggle">
 							<div id="mm-iframe-wrap">
-								<iframe src="http://perishablepress.com/current/index-hmd.html"></iframe>
+								<iframe src="https://perishablepress.com/current/index-hmd.html"></iframe>
 							</div>
 						</div>
 					</div>
